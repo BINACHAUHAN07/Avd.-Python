@@ -1,0 +1,32 @@
+from tkinter import*
+import tkinter
+def test1():
+    Lb1.delete(1)
+    #selection=Lb1.curselection()
+    #print('Listbox selection :',selection)
+    #print(Lb1.get(2))
+    #print(Lb1.get(2,4))
+    #Lb1.insert(END,"A")
+    #print(Lb1.nearest(70))
+    print(Lb1.size())
+    #-----------------------code to add in new listbox-----------------
+    #n1=Lb1.curselection()
+    #i1=Lb1.get(n1)
+    #print(n1,i1)
+    #Lb1.delete(n1)
+    #Lb2.insert(END,i1)
+top=Tk()
+Lb1=Listbox(top,selectmode=BROWSE)
+Lb2=Listbox(top,selectmode=BROWSE)
+Lb1.insert(1,"Python")
+Lb1.insert(2,"Perl")
+Lb1.insert(3,"C")
+Lb1.insert(4,"PHP")
+Lb1.insert(5,"JSP")
+Lb1.insert(6,"Ruby")
+Lb1.pack()
+Lb2.pack()
+Btn1=Button(top,text="delete",command=test1)
+Btn1.pack()
+top.mainloop()
+    
